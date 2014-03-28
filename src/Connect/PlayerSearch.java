@@ -1,12 +1,12 @@
 
 
-package connect4;
+package Connect;
 
 /**
- *
+ *Playersearch is essentially the AI that is used to determine the next computer move.
  * @author janhaeberle
  */
-class playerSearch {
+class PlayerSearch {
     int aiStrength=4;
     /**
      * This is called to tell the computer to find his next move given the state of the board.
@@ -49,7 +49,7 @@ class playerSearch {
         int lowest = 0;
         for(int i=0;i<7;i++)
         {
-            moves[i] = Integer.MAX_VALUE;
+            moves[i] = 5000;
             if(cB.validMove(i))
             {
                 cB.makeMove(i);
@@ -94,7 +94,7 @@ class playerSearch {
         return moves[highest];
         
     }
-    void setAi(int strength){
+    void setAiStrength(int strength){
         aiStrength=strength;
     }
     

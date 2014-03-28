@@ -4,8 +4,9 @@
 * and open the template in the editor.
 */
 
-package connect4;
+package Connect;
 
+import Connect.Board;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -170,7 +171,6 @@ public class BoardTest {
     public void testGetStrength() {
         System.out.println("getStrength");
         Board instance = new Board();
-        playerSearch s=new playerSearch();
         instance.makeMove(0);
         //The token should be part of three possible cl, but it's player twos turn, so:
         int expResult=-13;

@@ -4,8 +4,10 @@
  * and open the template in the editor.
  */
 
-package connect4;
+package Connect;
 
+import Connect.PlayerSearch;
+import Connect.Board;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -19,24 +21,6 @@ import static org.junit.Assert.*;
  */
 public class playerSearchTest {
     
-    public playerSearchTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
-    }
-    
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
 
     /**
      * Test of getMove method, of class playerSearch.
@@ -45,7 +29,7 @@ public class playerSearchTest {
     public void testGetMove() {
         System.out.println("getMove");
         Board cB = new Board();
-        playerSearch instance = new playerSearch();
+        PlayerSearch instance = new PlayerSearch();
         cB.makeMove(0);
         cB.makeMove(1);
         cB.makeMove(0);

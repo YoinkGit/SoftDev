@@ -1,6 +1,6 @@
 
 
-package connect4;
+package Connect;
 
 /**
  * The Board class contains everything having to do with the board:
@@ -84,7 +84,9 @@ class Board {
             {
                 Point[] temp = new Point[4];
                 for(int i=x;i<x+4;i++)
+                {
                     temp[i-x]=grid[i][y];
+                }
                 cl[count]=temp;
                 count++;
             }
@@ -224,6 +226,7 @@ class Board {
         }
         if(playerone>0 && (playertwo==0))
         {
+            //The score is returned as positive for player one and negative for player two (convention)
             return playerone;
         }
         if(playertwo>0 && (playerone==0))
@@ -255,6 +258,7 @@ class Board {
                 sum+=-weights[Math.abs(thisScore)];
             }
         }
+        //The right to move is worth 16:
         return sum+(cp==PLAYER_ONE?16:-16);
     }
     /**
@@ -264,7 +268,7 @@ class Board {
     public String toString()
     {
         String temp = "";
-        temp+="0123456\n";
+        temp+="1234567\n";
         for(int y=rows-1;y>-1;y--){
             for(int x=0;x<cols;x++)
                 if(grid[x][y].getState()==EMPTY)
@@ -275,7 +279,7 @@ class Board {
                     temp = temp + "X";
             temp += "\n";
         }
-        temp+="0123456\n";
+        temp+="1234567\n";
         return temp;
     }
     

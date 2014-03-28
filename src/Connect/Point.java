@@ -1,5 +1,5 @@
 
-package connect4;
+package Connect;
 
 /**
  * This class is used to store the state of each point on the board.
